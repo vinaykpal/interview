@@ -2,7 +2,8 @@
 #include<unordered_map>
 #include<vector>
 
-using namepsace std;
+using namespace std;
+
 vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
         unordered_map<int, int> dict;
         vector<int> res;
@@ -13,12 +14,12 @@ vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
     }
     
 int main () {
-  vector<int> n1 = {1,2,2,3};
+  vector<int> n1 = {1,2,2,4,3,2,2,2};
   vector<int> n2 = {2,2};
   
   vector<int> res = intersect(n1, n2);
 
-  vector<int> it;
+  vector<int>::iterator it;
   for(it = res.begin(); it!=res.end(); ++it)
     cout<<"val: "<< *it<< endl;
   
